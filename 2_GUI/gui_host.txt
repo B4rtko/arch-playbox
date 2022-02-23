@@ -1,0 +1,61 @@
+# ESSENTIALS FOR WORKING WITH NEW WINDOW MANAGER:
+    # text editor, terminal emulator, web browser, dmenu (helpful)
+
+
+# ==== i3WM ==== - works
+sudo pacman -S xorg xorg-xinit
+sudo pacman -S xf86-video-fbdev # video driver; for real machines should be drives for cpu (i think)
+yay -S i3-wm # or install manually; also maybe there is i3-wm on pacman
+sudo pacman -S i3status
+
+sudo pacman -S nitrogen # wallpaper - not necessary
+sudo pacman -S picom # compositor - don't knoow what for
+sudo pacman -S firefox # web browser
+sudo pacman -S terminator # terminal - looks good, we could check out other ones though
+sudo pacman -S dmenu # dmenu - zmienić na rofi
+
+cp /etc/X11/xinit/xinitrc ~/.xinitrc
+nano ~/.xinitrc
+    # delete +-5 last lines (with executing default WM)
+    nitrogen --restore &
+    picom &
+    exec i3
+
+sudo reboot
+
+startx # as normal user
+
+# execute startx automatically on startup
+nano ~/.bash_profile # add line at the end
+    [[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1
+
+# configure i3:
+nano ~/.config/i3/config
+    focus_follows_mouse no # add to disable focus on mouse hover
+    # comment out bindsym for dmenu and replace with rofi (if dmenu is default, but not sure)
+    # change window kill binding from $mod+Shift+q to $mod+q (faster to use)
+
+# for tiling window manager there is no polkit installed as default, so it is good idea to install it (it is used to give privillages when escalated)
+sudo pacman -S polkit lxsession # not sure if polkit is essential
+nano ~/.config/i3/config
+    # add exec of lxsession on startup
+    exec --no-startup-id lxsession
+
+
+# ==== łysy z jutuba - standalone window manager - dwm ==== - incomplete, łysy korzystał ze swoich window managerów z repo aur, nie sprawdzałem, chociaż nie wiem czy nie lepiej wziąć coś popularniejszego dla lepszego supportu na forach
+
+sudo pacman -S xorg xorg-xinit
+sudo pacman -S xf86-video-fbdev # video driver
+
+sudo pacman -S nitrogen # wallpaper
+sudo pacman -S picom # compositor
+sudo pacman -S firefox # web browser
+sudo pacman -S terminator # terminal
+
+# ==== dwm ==== - worth trying out
+
+
+
+
+
+

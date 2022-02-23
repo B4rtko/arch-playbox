@@ -1,0 +1,14 @@
+# man
+git clone https://git.kernel.org/pub/scm/docs/man-pages/man-pages
+cd man-pages
+sudo make install
+sudo pacman -S man-db
+
+# htop
+sudo pacman -S htop
+
+# networkmanager module
+systemctl enable NetworkManager
+systemctl start NetworkManager
+
+

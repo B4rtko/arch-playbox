@@ -1,0 +1,4 @@
+sudo pacman -S virtualbox-guest-utils
+sudo pacman -S hwinfo # not sure if necessary
+sudo systemctl vboxservice.service
+sudo reboot

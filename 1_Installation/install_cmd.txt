@@ -1,0 +1,80 @@
+ls /usr/share/kbd/keymaps/**/*.map.gz | less
+loadkeys /usr/share/kbd/keymaps/i386/qwerty/pl.map.gz
+ping google.com # check internet connection
+timedatectl set-ntp true
+timedatectl status # check time
+# fdisk partition for uefi
+fdisk -l
+fdisk /dev/sda
+    # m for help
+    g # gpd partition table for uefi
+    n
+        1 # efi partition
+        # [enter] for default
+        +550M
+    n
+        2 # swap partition
+        # [enter] for default
+        +2G
+    n
+        3 # filesystem partition
+        # [enter] for default
+        # [enter] for give rest space
+    t
+        # L to list avaliable filesystems
+        1
+        1 # EFI filesystem
+    t
+        # L to list avaliable filesystems
+        2
+        19 # swap partition
+    w # write filesystem
+# make filesystems on partitions
+mkfs.fat -F32 /dev/sda1 # EFI needs to be FAT32
+mkswap /dev/sda2
+swapon /dev/sda2
+mkfs.ext4 /dev/sda3
+mount /dev/sda3 /mnt # mount filesystem
+# installing linux
+pacstrap /mnt base linux linux-firmware
+# making filesystem table
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt # changing to root to new installation
+# prompt changes
+ln -sf /usr/share/zoneinfo/Poland
+hwclock --systohc
+pacman -S nano
+nano /etc/locale.gen
+# uncomment pl_PL.UTF-8 UTF-8
+locale-gen
+nano /etc/hostname
+# write hostname
+nano /etc/hosts
+    127.0.0.1    localhost
+    ::1          localhost
+    127.0.0.1    [hostname].localdomain   [hostname]
+passwd # set password for root
+# enter and repeat password
+useradd -m [username] # create new user
+passwd [username] # set user password
+usermod -aG wheel,audio,video,optical,storage [username] # add user to group with privileges
+pacman -S sudo
+EDITOR=nano visudo # edit sudo config
+    # uncomment %wheel ALL=(ALL) ALL
+pacman -S grub
+pacman -S efibootmgr dosfstools os-prober mtools
+mkdir /boot/EFI
+mount /dev/sda1 /boot/EFI
+grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+grub-mkconfig -o /boot/grub/grub.cfg
+pacman -S networkmanager vim git
+systemctl enable NetworkManager
+exit
+umount -l /mnt
+reboot
+
+
+
+
+
+

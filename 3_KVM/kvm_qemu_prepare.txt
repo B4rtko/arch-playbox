@@ -1,0 +1,38 @@
+LC_ALL=C lscpu | grep Virtualization # check if machine is able for virtualization
+zgrep CONFIG_KVM /proc/config.gz # chech if kvm and kvm_intel/kvm_amd are set to m or y
+
+sudo pacman -S virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
+sudo nano /etc/libvirt/libvirtd.conf
+    # change lineabout unix_sock_group to:
+    unix_sock_group = "libvirt"
+    # change the unix_sock_rw_perms value to:
+    unix_sock_rw_perms = "0770"
+sudo usermod -a -G libvirt $(whoami) # just add user to libvirt gruop
+newgrp libvirt
+sudo systemctl restart libvirtd.service
+sudo modprobe -r kvm_intel
+sudo modprobe kvm_intel nested=1
+echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf
+
+
+
+
+
+
+
+# lsmod | grep kvm
+# sudo systemctl enable libvirtd
+# sudo systemctl start libvirtd
+# sudo usermod -G libvirtd -a [username]
+
+
+
+
+
+
+
+
+
+
