@@ -1,4 +1,5 @@
 sudo pacman -S virtualbox-guest-utils
-sudo pacman -S hwinfo # not sure if necessary
-sudo systemctl vboxservice.service
+sudo systemctl enable vboxservice.service
 sudo reboot
+
+# hwinfo helps with chekcing resolution

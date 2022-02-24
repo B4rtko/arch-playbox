@@ -42,6 +42,31 @@ nano ~/.config/i3/config
     exec --no-startup-id lxsession
 
 
+# ==== gnome ====
+sudo pacman -Syu
+sudo pacman -S xorg xorg-xinit xorg-server
+sudo pacman -S gnome
+sudo pacman -S terminator # something is not oukie-dokie and standard terminal doesn't work
+sudo systemctl start gdm.service
+sudo systemctl enable gdm.service
+
+
+# ==== awesome ====
+sudo pacman -S xorg xorg-xinit xorg-server awesome
+sudo pacman -S terminator # terminal - looks good, we could check out other ones though
+sudo pacman -S firefox # web browser
+nano ~/.xinitrc
+    exec awesome
+startx
+# execute startx automatically on startup
+nano ~/.bash_profile # add line at the end
+    [[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1
+    
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome
+nano ~/.config/awesome # for config changes
+sudo pacman -S picom rofi # better than standard dmenu
+
+
 # ==== łysy z jutuba - standalone window manager - dwm ==== - incomplete, łysy korzystał ze swoich window managerów z repo aur, nie sprawdzałem, chociaż nie wiem czy nie lepiej wziąć coś popularniejszego dla lepszego supportu na forach
 
 sudo pacman -S xorg xorg-xinit
