@@ -9,7 +9,7 @@ yay -S i3-wm # or install manually; also maybe there is i3-wm on pacman
 sudo pacman -S i3status
 
 sudo pacman -S nitrogen # wallpaper - not necessary
-sudo pacman -S picom # compositor - don't knoow what for
+sudo pacman -S picom # compositor - for managing popups' shadows
 sudo pacman -S firefox # web browser
 sudo pacman -S terminator # terminal - looks good, we could check out other ones though
 sudo pacman -S dmenu # dmenu - zmienić na rofi
