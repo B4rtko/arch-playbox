@@ -1,0 +1,58 @@
+    1  timetatectl list-timezones | grep Pol
+    2  timedatectl list-timezones | grep Pol
+    3  ln - sf /usr/share/zoneinfo/Poland /etc/localtime
+    4  timedatactl set-timezone Poland
+    5  timedatectl set-timezone Poland
+    6  ln - sf /usr/share/zoneinfo/Poland /etc/localtime
+    7  ls /etc
+    8  ln - sf /usr/share/zoneinfo/Poland /etc/localtime
+    9  ln - sf /usr/share/zoneinfo/Poland /etc/
+   10  ln - sf /usr/share/zoneinfo/Poland /etc/localtime
+   11  ln -sf /usr/share/zoneinfo/Poland /etc/localtime
+   12  hwclock --systohc
+   13  pacman -S nano
+   14  nano /etc/locale.gen 
+   15  locale-gen
+   16  nano /etc/locale.conf
+   17  nano /etc/locale.gen 
+   18  nano /etc/locale.conf
+   19  nano /etc/hostname
+   20  nano /etc/hosts
+   21  passwd
+   22  pacman -S grub efibootmgr networkmanager network-manager-applet mtools dosfstools reflector git base-devel linux-headers bluez bluez-utils cups xdg-utils xdg-user-dirs
+   23  nano /etc/mkinitcpio.conf 
+   24  mkinitcpio -p linux
+   25  grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --removable --recheck
+   26  grub-mkconfig -o /boot/grub/grub.cfg
+   27  systemctl enable NetworkManager
+   28  systemctl enable bluetooth
+   29  systemctl enable org.cups.cupsd
+   30  pacman -S cups
+   31  systemctl enable org.cups.cupsd
+   32  pacman -S cups
+   33  systemctl enable org.cups.cupsd
+   34  systemctl enable cups.cupsd
+   35  systemctl enable org.cups.cupsd.service
+   36  systemctl enable cups
+   37  systemctl enable org.cups.cupsd.service
+   38  nano /usr/lib/systemd/system/cups.socket
+   39  hostnamectl
+   40  useradd -mG wheel user_1
+   41  passwd user_1
+   42  passwd user_1
+   43  EDITOR=nano visudo
+   44  pacman -S vim
+   45  exit
+   46  ls
+   47  ip a
+   48  nmtui --help
+   49  nmtui
+   50  mkdir /etc/systemd/journal.conf.d
+   51  rm /etc/systemd/journal.conf.d
+   52  rm -rf /etc/systemd/journal.conf.d
+   53  mkdir /etc/systemd/journald.conf.d
+   54  nano /etc/systemd/journald.conf.d/usbstick.conf
+   55  pacman -S xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-amdgpu xf86-video-nouveau
+   56  reboot
+   57  history
+   58  history > /home/user_1/bash_history_arch_live_usb_root.txt
