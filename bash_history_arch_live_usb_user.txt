@@ -1,0 +1,223 @@
+    1  ls
+    2  pwd
+    3  ls
+    4  ls
+    5  cd Documents/
+    6  ls
+    7  cd ..
+    8  lsblk 
+    9  sudo reboot
+   10  ls
+   11  ls
+   12  ls
+   13  ls
+   14  ls
+   15  cd ..
+   16  ls
+   17  cd ..
+   18  ls
+   19  pwd
+   20  sudo shutdown now
+   21  apropos user
+   22  about user
+   23  less /etc/passwd
+   24  ls
+   25  cd ~
+   26  ls
+   27  cd ..
+   28  ls
+   29  sudo shutdown now
+   30  ls
+   31  sudo su
+   32  ls
+   33  pacman -S --needed base-devel
+   34  sudo pacman -S --needed base-devel
+   35  git clone https://aur.archlinux.org/yay.git
+   36  cd yay
+   37  makepkg -si
+   38  sudo hwclock --verbose
+   39  ntpd --help
+   40  ntp --help
+   41  timedatactl --help
+   42  timedatectl --help
+   43  timedatectl status
+   44  sudo ntpd -qg
+   45  sudo pacman -S ntpd
+   46  sudo pacman -S ntp
+   47  sudo ntpd -qg
+   48  timedatectl status
+   49  sudo hwclock --verbose
+   50  makepkg -si
+   51  cd ..
+   52  yay --help
+   53  rm yay
+   54  rm -rf yay
+   55  yay --help
+   56  sudo pacman -S xorg xorg-xinit xf86-video-fbdev
+   57  xorg --version
+   58  yay -S i3-wm
+   59  sudo pacman -S nitrogen picom firefox
+   60  pacman -S tilix
+   61  sudo pacman -S tilix
+   62  pacman -S rofi
+   63  sudo pacman -S rofi
+   64  cp /etc/X11/xinit/xinitrc ~/.xinitrc
+   65  nano ./.xinitrc 
+   66  sudo reboot
+   67  rofi
+   68  cat /etc/locale.conf 
+   69  nano /etc/locale.conf 
+   70  sudo nano /etc/locale.conf 
+   71  startx
+   72  ls
+   73  rhjgbner
+   74  ls
+   75  ls
+   76  ls
+   77  nano ./.config/i3/config 
+   78  nano ./.config/i3/config 
+   79  nano ./.config/i3/config 
+   80  nano /.bash_profile
+   81  nano /.bash_profile
+   82  sudo nano /.bash_profile
+   83  reboot
+   84  sudo reboot
+   85  sudo nano ~/.bash_profile
+   86  sudo rm /.bash_profile
+   87  nano ~/.bash_profile
+   88  sudo reboot
+   89  sudo pacman -S i3status
+   90  killall firefox
+   91  nano ./.bashrc 
+   92  bash
+   93  ddefwfrgrg
+   94  ls
+   95  mkdir Repos
+   96  cd Repos/
+   97  git clone https://github.com/B4rtko/arch-playbox
+   98  nitrogen --help
+   99  nitrogen --help
+  100  man nitrogen
+  101  cd ..
+  102  nano ./.config/i3/config 
+  103  nano ./.config/i3/config 
+  104  reboot
+  105  sudo reboot
+  106  nitrogen --set-auto ~/Repos/arch-playbox/98_Wallpapers/funny/ --random
+  107  nitrogen --set-auto ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  108  nitrogen --set-auto ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  109  nitrogen --set-scaled ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  110  nitrogen --set-centered ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  111  nitrogen --set-tiled ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  112  nitrogen --set-tiled ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  113  nitrogen --set-tiled ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  114  nitrogen --set-zoom ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  115  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/Funny/ --random
+  116  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  117  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  118  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  119  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  120  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  121  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  122  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  123  killall firefox
+  124  killall firefox
+  125  killall firefox
+  126  sudo pacman -S virtualbox-guest-utils
+  127  sudo systemctl enable vboxservice.service
+  128  sudo reboot
+  129  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  130  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  131  nitrogen --set-zoom-fill ~/Repos/arch-playbox/98_Wallpapers/ --random
+  132  nano ./.config/i3/config 
+  133  nano ./.config/picom.conf
+  134  nano ./.config/i3/config 
+  135  killall picom
+  136  picom -CBb
+  137  man picom
+  138  nano ./.config/i3/config 
+  139  sudo reboot
+  140  echo $EDITOR
+  141  nano ./.config/i3/config 
+  142  nano ./.config/picom/
+  143  nano ./.config/picom/picom.conf 
+  144  nano ./.config/picom/picom.conf 
+  145  nano ./.config/picom/picom.conf 
+  146  pacman -S ranger
+  147  sudo pacman -S ranger
+  148  ranger
+  149  ranger --help
+  150  vim --version
+  151  vim --version
+  152  vim ./.config/picom/picom.conf 
+  153  pacman -S nnn
+  154  sudo pacman -S nnn
+  155  nnn --version
+  156  nnn
+  157  nnn
+  158  nnn
+  159  nnn
+  160  nano ./.bashrc
+  161  echo $EDITOR
+  162  nano ./.bashrc
+  163  echo $EDITOR
+  164  bash
+  165  nnn
+  166  nnn -e
+  167  nano ./.bash_aliases
+  168  nnn
+  169  type nnn
+  170  nano ./.bash_aliases
+  171  type nnn
+  172  nano ./.bashrc 
+  173  type nnn
+  174  nnn
+  175  sudo pacman -S i3-gaps
+  176  yay i3-gaps
+  177  yay i3-gaps
+  178  nano ./.bash_aliases 
+  179  type i3config
+  180  top
+  181  picom &
+  182  pacman -S compton
+  183  sudo pacman -S compton
+  184  compton
+  185  cat /etc/X11/xorg.conf
+  186  ls /etc/X11/xorg.conf.d/
+  187  ls /etc/
+  188  ls -l /etc/
+  189  ls -l /etc/conf.d/
+  190  mkdir ./.config/picom
+  191  cp /etc/xdg/picom.conf ./.config/picom/
+  192  nano ./.config/picom/picom.conf 
+  193  picom &
+  194  picom -b
+  195  nano ./.config/picom/picom.conf 
+  196  picom --backend xrender
+  197  picom --no-vsync
+  198  picom --no-vsync -b
+  199  i3config
+  200  type i3config
+  201  i3config 
+  202  i3config 
+  203  nano ./.bash_aliases 
+  204  sudo shutdown now
+  205  systemctl power off
+  206  systemctl poweroff
+  207  sudo shutdown now
+  208  nnn
+  209  [A
+  210  nnn
+  211  cd Repos/arch-playbox/
+  212  git status
+  213  git status
+  214  nano ~/.bash_profile 
+  215  nano ~/.bashrc
+  216  nano ~/.bashrc
+  217  nano ~/.bashrc
+  218  bash
+  219  top
+  220  df --help
+  221  df
+  222  history
+  223  history > bash_history_arch_live_usb.txt
