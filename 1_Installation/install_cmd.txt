@@ -7,7 +7,7 @@ timedatectl status # check time
 fdisk -l
 fdisk /dev/sda
     # m for help
-    g # gpd partition table for uefi
+    g # gpt partition table for uefi
     n
         1 # efi partition
         # [enter] for default
