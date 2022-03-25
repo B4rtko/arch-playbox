@@ -12,6 +12,10 @@ echo "Install htop"
 echo "-------------------------------------------------"
 sudo pacman -S htop --noconfirm
 
+echo "Install openssh"
+echo "-------------------------------------------------"
+sudo pacman -S openssh --noconfirm
+
 echo "Install yay helper"
 echo "-------------------------------------------------"
 cd ~
