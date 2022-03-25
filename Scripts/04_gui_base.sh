@@ -1,7 +1,7 @@
 sudo pacman -S xorg xorg-xinit --noconfirm
 sudo pacman -S xf86-video-fbdev --noconfirm
-yay -S i3-wm
-sudo pacman -S i3status
+yay -S i3-wm --noconfirm
+sudo pacman -S i3status --noconfirm
 
 sudo pacman -S nitrogen --noconfirm # wallpaper - not necessary
 sudo pacman -S picom --noconfirm # compositor - for managing popups' shadows
