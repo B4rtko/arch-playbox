@@ -2,7 +2,7 @@
 ## Steps for automated installation with scripts:
 1. Download preinstall script with curl command:
 ```
-curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/01_preinstall.sh -o preinstall.sh
+curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/01_preinstall.sh -o 01_preinstall.sh
 ```
 2. Ensure that disk for arch does not contain important data (WILL BE ERASED!)
 3. Ensure that disk for arch is empty. Run:
@@ -45,7 +45,18 @@ dd if=/dev/zero of=/dev/sda bs=1M
 
 4. Run script with:
 ```
-bash preinstall.sh
+bash 01_preinstall.sh
 ```
+
+5. After script with preinstall finishes there should be prompt slightly changed. Now to preceed download next script with command:
+```
+curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/02_setup.sh -o 02_setup.sh
+```
+
+6. Run script with:
+```
+bash 02_setup.sh
+```
+6.1. You will be asked to type in hostname, host password (and repeat), username with root privileges and password for user (and repeat)
 
 
