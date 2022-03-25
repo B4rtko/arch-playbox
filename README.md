@@ -9,7 +9,7 @@ curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/01_prein
 ```
 lsblk
 ```
-_3.1. Example output that is acceptable for preinstall script:
+3.1. Example output that is acceptable for preinstall script:
 ```
 NAME MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 loop0  7:0    0 657.4M  1 loop /run/archiso/airootfs
@@ -17,7 +17,7 @@ sda    8:0    0  20.5G  0 disk
 sr0   11:0    1 812.3M  0 rom  /run/archiso/bootmnt
 ```
 
-_3.2. Example output that is unacceptable and ways of fixing:
+3.2. Example output that is unacceptable and ways of fixing:
 ```
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 loop0    7:0    0 657.4M  1 loop /run/archiso/airootfs
@@ -28,17 +28,17 @@ sda      8:0    0  20.5G  0 disk
 sr0     11:0    1 812.3M  0 rom  /run/archiso/bootmnt
 ```
 
-__3.2.1. If there is "[SWAP]" on one of partitions of our disk (in example partition sda2 on sda disk) run:
+3.2.1. If there is "[SWAP]" on one of partitions of our disk (in example partition sda2 on sda disk) run:
 ```
 swapoff -a
 ```
 
-__3.2.2. If any of partitions of our disk have path written in MOUNTPOINTS run:
+3.2.2. If any of partitions of our disk have path written in MOUNTPOINTS run:
 ```
 umount -a
 ```
 
-__3.2.3. If there are any partitions of out disk (in example sda1, sda2, sda3) run dd cmd on disk (in example there is /dev/sda disk, but it may has different path - watch on lsblk):
+3.2.3. If there are any partitions of out disk (in example sda1, sda2, sda3) run dd cmd on disk (in example there is /dev/sda disk, but it may has different path - watch on lsblk):
 ```
 dd if=/dev/zero of=/dev/sda bs=1M
 ```
