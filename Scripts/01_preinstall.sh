@@ -12,8 +12,16 @@ echo "Setting time"
 echo "-------------------------------------------------"
 timedatectl set-ntp true
 
-echo "Creating disc partitions"
+echo "Creating partitions on disk"
 echo "-------------------------------------------------"
+
+#lsblk
+#echo "Please enter disk: (example /dev/sda)"
+#read DISK
+
+swapoff -a
+umount -a
+dd if=/dev/zero of=dev/sda bs=1M
 
 yes | parted /dev/sda mklabel gpt
 parted /dev/sda mkpart /dev/sda1 fat32 0% 550MiB
