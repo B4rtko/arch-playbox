@@ -15,33 +15,33 @@ timedatectl set-ntp true
 echo "Creating partitions on disk"
 echo "-------------------------------------------------"
 
-#lsblk
-#echo "Please enter disk: (example /dev/sda)"
-#read DISK
+lsblk
+echo "Please enter disk for arch: (example /dev/sda)"
+read DISK
 
-swapoff -a
-umount -a
-dd if=/dev/zero of=dev/sda bs=1M
+#swapoff -a
+#umount -a
+#dd if=/dev/zero of=dev/sda bs=1M
 
-yes | parted /dev/sda mklabel gpt
-parted /dev/sda mkpart /dev/sda1 fat32 0% 550MiB
-parted /dev/sda mkpart /dev/sda2 linux-swap 550MiB 2.5GiB
-parted /dev/sda mkpart /dev/sda3 ext4 2.5GiB 100%
+yes | parted ${DISK} mklabel gpt
+parted ${DISK} mkpart ${DISK}1 fat32 0% 550MiB
+parted ${DISK} mkpart ${DISK}2 linux-swap 550MiB 2.5GiB
+parted ${DISK} mkpart ${DISK}3 ext4 2.5GiB 100%
 
-parted /dev/sda set 1 esp on  # ogarnąć czy jest potrzebne - w dokumentacji jest napisane że wsp to tryb boot dla tablicy gpt, ale ona już ma oznaczenie boot więc może nie jest potrzebne; jeśli nie przeszkadza to też nie zaszkodzi
+parted ${DISK} set 1 esp on  # ogarnąć czy jest potrzebne - w dokumentacji jest napisane że wsp to tryb boot dla tablicy gpt, ale ona już ma oznaczenie boot więc może nie jest potrzebne; jeśli nie przeszkadza to też nie zaszkodzi
 
 echo "Formatting partitions"
 echo "-------------------------------------------------"
-mkfs.fat -F32 /dev/sda1
+mkfs.fat -F32 ${DISK}1
 
-mkswap /dev/sda2
-swapon /dev/sda2
+mkswap ${DISK}2
+swapon ${DISK}2
 
-mkfs.ext4 /dev/sda3
+mkfs.ext4 ${DISK}3
 
 echo "Mounting filesystem"
 echo "-------------------------------------------------"
-mount /dev/sda3 /mnt
+mount ${DISK}3 /mnt
 
 #echo "Installing Arch, Linux Kernel and NetworkManager"
 #echo "-------------------------------------------------"
@@ -51,7 +51,7 @@ mount /dev/sda3 /mnt
 
 echo "Saving filesystem table"
 echo "-------------------------------------------------"
-genfstab -U /mnt >> /mnt/etc/fstab
+#genfstab -U /mnt >> /mnt/etc/fstab
 
 #echo "Logging to root on filesystem"
 #echo "-------------------------------------------------"
