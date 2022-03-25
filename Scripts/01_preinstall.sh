@@ -43,19 +43,19 @@ echo "Mounting filesystem"
 echo "-------------------------------------------------"
 mount /dev/sda3 /mnt
 
-echo "Installing Arch, Linux Kernel and NetworkManager"
-echo "-------------------------------------------------"
-pacstrap /mnt base base-devel  --noconfirm --needed
-pacstrap /mnt linux linux-firmware --noconfirm --needed
-pacstrap /mnt networkmanager --noconfirm --needed
+#echo "Installing Arch, Linux Kernel and NetworkManager"
+#echo "-------------------------------------------------"
+#pacstrap /mnt base base-devel  --noconfirm --needed
+#pacstrap /mnt linux linux-firmware --noconfirm --needed
+#pacstrap /mnt networkmanager --noconfirm --needed
 
 echo "Saving filesystem table"
 echo "-------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
-echo "Logging to root on filesystem"
-echo "-------------------------------------------------"
-arch-chroot /mnt
+#echo "Logging to root on filesystem"
+#echo "-------------------------------------------------"
+#arch-chroot /mnt
 
 
 
