@@ -33,14 +33,19 @@ sr0     11:0    1 812.3M  0 rom  /run/archiso/bootmnt
 swapoff -a
 ```
 
-3.2.2 If any of partitions of our disk have path written in MOUNTPOINTS run:
+3.2.2. If any of partitions of our disk have path written in MOUNTPOINTS run:
 ```
 umount -a
 ```
 
-3.2.3 If there are any partitions of out disk (in example sda1, sda2, sda3) run dd cmd on disk (in example there is /dev/sda disk, but it may has different path - watch on lsblk):
+3.2.3. If there are any partitions of out disk (in example sda1, sda2, sda3) run dd cmd on disk (in example there is /dev/sda disk, but it may has different path - watch on lsblk):
 ```
 dd if=/dev/zero of=/dev/sda bs=1M
+```
+
+4. Run script with:
+```
+bash preinstall.sh
 ```
 
 
