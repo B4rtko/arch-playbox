@@ -16,6 +16,10 @@ echo "Install openssh"
 echo "-------------------------------------------------"
 sudo pacman -S openssh --noconfirm
 
+echo "Install wget"
+echo "-------------------------------------------------"
+sudo pacman -S wget --noconfirm
+
 echo "Install yay helper"
 echo "-------------------------------------------------"
 cd ~
