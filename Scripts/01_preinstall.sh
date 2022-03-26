@@ -53,6 +53,10 @@ echo "Saving filesystem table"
 echo "-------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 
+echo "Downloading 02_setup.sh, 03_tools.sh and 04_gui_base.sh scripts to /usr/Scripts_autoinstall on arch"
+echo "-------------------------------------------------"
+echo "mkdir -p /usr/Scripts_autoinstall; curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/02_setup.sh -o /usr/Scripts_autoinstall/02_setup.sh;curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/03_tools.sh -o /usr/Scripts_autoinstall/03_tools.sh; curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/04_gui_base.sh -o /usr/Scripts_autoinstall/04_gui_base.sh" | arch-chroot /mnt
+
 echo "Logging to root on filesystem"
 echo "-------------------------------------------------"
 arch-chroot /mnt

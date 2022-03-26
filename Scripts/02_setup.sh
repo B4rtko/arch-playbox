@@ -55,12 +55,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S nano vim git --noconfirm
 systemctl enable NetworkManager
 
-echo "Downloading 03_tools.sh and 04_gui_base.sh scripts to /usr/Scripts_autoinstall"
-echo "-------------------------------------------------"
-mkdir -p /usr/Scripts_autoinstall
-curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/03_tools.sh -o /usr/Scripts_autoinstall/03_tools.sh
-curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/04_gui_base.sh -o /usr/Scripts_autoinstall/04_gui_base.sh
-
 
 echo "#################################################"
 echo "#################################################"
