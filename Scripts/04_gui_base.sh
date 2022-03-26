@@ -9,13 +9,16 @@ sudo pacman -S firefox --noconfirm # web browser
 sudo pacman -S terminator --noconfirm # terminal - looks good, we could check out other ones though
 sudo pacman -S rofi --noconfirm # dmenu - zmienić na rofi
 sudo pacman -S polkit lxsession --noconfirm # not sure if polkit is essential; tools for gtk window for sudo authentication
+sudo pacman -S mupdf --noconfirm
+sudo pacman -S nautilus --noconfirm
 
-#cd ~
-#git clone https://github.com/B4rtko/arch-playbox.git
-#cp ~/arch-playbox/Configs/xinitrc ~/.xinitrc
 curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Configs/xinitrc -o ~/.xinitrc
 
 echo '[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1' >> ~/.bash_profile
+
+mkdir ~/Pictures
+wget https://raw.githubusercontent.com/B4rtko/arch-wallpapers/main/Arch/Arch_12.png -O ~/Pictures/Arch_12.png
+
 
 # configure i3:
 #nano ~/.config/i3/config
