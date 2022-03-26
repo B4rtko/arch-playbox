@@ -65,7 +65,7 @@ to exit from arch back to iso, then run:
 umount -l /mnt
 reboot
 ```
-to umount partitions used for installation and reboot into arch
+to unmount partitions used for installation and reboot into arch
 
 
 6. After reboot run script with:
