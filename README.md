@@ -48,18 +48,15 @@ dd if=/dev/zero of=/dev/sda bs=1M
 bash 01_preinstall.sh
 ```
 
-5. After script with preinstall finishes there should be prompt slightly changed. Now to preceed download next script with command:
-```
-curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/02_setup.sh -o 02_setup.sh
-```
+4.1. Preinstallation script will download rest of installation scripts and save them to /usr/Scripts_autoinstall on freshly build arch
 
-6. Run script with:
+5. Run script with:
 ```
-bash 02_setup.sh
+bash /usr/Scripts_autoinstall/02_setup.sh
 ```
-6.1. You will be asked to type in hostname, host password (and repeat), username with root privileges and password for user (and repeat)
+5.1. You will be asked to type in hostname, host password (and repeat), username with root privileges and password for user (and repeat)
 
-6.2. After script is done you should run:
+5.2. After script is done you should run:
 ```
 exit
 ```
@@ -70,30 +67,22 @@ reboot
 ```
 to umount partitions used for installation and reboot into arch
 
-7. After rebooting log in as created previously user and download next scripts:
+
+6. After reboot run script with:
 ```
-curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/03_tools.sh -o 03_tools.sh
+bash /usr/Scripts_autoinstall/03_tools.sh
+```
+6.1. You can be asked to type user password in order to use pacman
+
+
+7. Next run script with:
+```
+bash /usr/Scripts_autoinstall/04_gui_base.sh
 ```
 
-8. Run script with:
-```
-bash 03_tools.sh
-```
-8.1. You can be asked to type user password in order to use pacman
+7.1. You can be asked to type user password in order to use pacman
 
-9. Now download script for gui installation (i3-WM)
-```
-curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/04_gui_base.sh -o 04_gui_base.sh
-```
-
-10. Run script with:
-```
-bash 04_gui_base.sh
-```
-
-10.1. You can be asked to type user password in order to use pacman
-
-11. Reboot - pure i3-wm should appear
+8. After reboot configured i3wm should appear. Run:
 ```
 sudo reboot
 ```
