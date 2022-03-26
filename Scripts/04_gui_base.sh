@@ -20,7 +20,8 @@ sudo pacman -S picom --noconfirm # compositor - for managing popups' shadows
 sudo pacman -S firefox --noconfirm # web browser
 sudo pacman -S terminator --noconfirm # terminal - looks good, we could check out other ones though
 sudo pacman -S rofi --noconfirm # dmenu - zmienić na rofi
-sudo pacman -S polkit lxsession --noconfirm # not sure if polkit is essential; tools for gtk window for sudo authentication
+sudo pacman -S lxsession --noconfirm # tool for gtk window for sudo authentication
+sudo pacman -S polkit --noconfirm
 sudo pacman -S mupdf --noconfirm
 sudo pacman -S nautilus --noconfirm
 
