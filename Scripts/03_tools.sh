@@ -29,5 +29,12 @@ makepkg -si --noconfirm
 cd ~
 rm -rf yay
 
+echo "Configure virtualbox guest utils"
+echo "-------------------------------------------------"
+sudo pacman -S virtualbox-guest-utils --noconfirm
+sudo systemctl enable vboxservice.service
 
+echo "#################################################"
+echo "Reboot to apply virtualbox guest utils"
+echo "#################################################"
 
