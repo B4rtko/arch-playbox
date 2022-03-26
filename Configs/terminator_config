@@ -1,0 +1,18 @@
+[global_config]
+  tab_position = hidden
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.15
+    cursor_color = "#aaaaaa"
+    show_titlebar = False
+    scrollbar_position = hidden
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
