@@ -16,18 +16,11 @@ curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Configs/xinitrc 
 
 echo '[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1' >> ~/.bash_profile
 
-mkdir ~/Pictures
+mkdir -p ~/Pictures
 wget https://raw.githubusercontent.com/B4rtko/arch-wallpapers/main/Arch/Arch_12.png -O ~/Pictures/Arch_12.png
 
 
-# configure i3:
-#nano ~/.config/i3/config
-#    focus_follows_mouse no # add to disable focus on mouse hover
-    # comment out bindsym for dmenu and replace with rofi (if dmenu is default, but not sure)
-    # change window kill binding from $mod+Shift+q to $mod+q (faster to use)
+mkdir -p ~/.config/i3/
+curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Configs/i3_config -o ~/.config/i3/config
 
-# for tiling window manager there is no polkit installed as default, so it is good idea to install it (it is used to give privillages when escalated)
-#nano ~/.config/i3/config
-    # add exec of lxsession on startup
-#    exec --no-startup-id lxsession
 
