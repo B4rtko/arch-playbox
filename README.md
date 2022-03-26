@@ -59,4 +59,43 @@ bash 02_setup.sh
 ```
 6.1. You will be asked to type in hostname, host password (and repeat), username with root privileges and password for user (and repeat)
 
+6.2. After script is done you should run:
+```
+exit
+```
+to exit from arch back to iso, then run:
+```
+umount -l /mnt
+reboot
+```
+to umount partitions used for installation and reboot into arch
+
+7. After rebooting log in as created previously user and download next scripts:
+```
+curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/03_tools.sh -o 03_tools.sh
+```
+
+8. Run script with:
+```
+bash 03_tools.sh
+```
+8.1. You can be asked to type user password in order to use pacman
+
+9. Now download script for gui installation (i3-WM)
+```
+curl https://raw.githubusercontent.com/B4rtko/arch-playbox/main/Scripts/04_gui_base.sh -o 04_gui_base.sh
+```
+
+10. Run script with:
+```
+bash 04_gui_base.sh
+```
+
+10.1. You can be asked to type user password in order to use pacman
+
+11. Reboot - pure i3-wm should appear
+```
+sudo reboot
+```
+
 
