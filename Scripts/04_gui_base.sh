@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 sudo pacman -S xorg xorg-xinit --noconfirm
 sudo pacman -S xf86-video-fbdev --noconfirm
 yay -S i3-wm --noconfirm
